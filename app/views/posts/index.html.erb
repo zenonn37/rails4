@@ -1,0 +1,42 @@
+<div class="row">
+
+	<div class="col-lg-8 newForm">
+         <%=link_to "+Add New Post", new_post_path%>
+
+		<h1>Blog Listing</h1>
+		<%=link_to "My Blog", posts_path%>
+<table class="table">
+     <tr>
+	<th>Title</th>
+	<th>Text</th>
+	</tr>
+
+	<%@post.each do |post|%>
+	<tr>
+    <td><%=post.title%></td>
+
+     <td><%=post.text%></td>
+      <td><%=link_to "Show Posts", posts_path%></td>
+     <td><%=link_to "Edit Posts", edit_post_path(post)%></td>
+
+
+	</tr>
+    <%end%>
+
+</table>
+
+
+
+	</div>
+
+
+	<div class="col-lg-4 newForm">
+
+
+
+
+
+	</div>
+
+
+</div>
