@@ -7,6 +7,7 @@ class PostsController < ApplicationController
      end
 
 	def new
+		@post = Post.new
 	end
 
 
@@ -40,6 +41,12 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+	end
+
+	def destroy
+		@post = Post.find(params[:id]) #find object to destroy
+		@post.destroy #destroy object
+		redirect_to posts_path #redirect to listing page
 	end
 
 	

@@ -1,6 +1,7 @@
 Rails4::Application.routes.draw do
 
   resources :posts
+  resources :comments
   root to: "welcome#index"
   get "welcome/index"
 

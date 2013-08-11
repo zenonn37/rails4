@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+	has_many :comments
+
 	#validate the title and text attibutes
 
 	validates :title, presence: true,
